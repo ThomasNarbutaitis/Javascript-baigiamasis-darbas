@@ -5,8 +5,17 @@ Parašykite funkciją showObjectKeys, kuri kaip argumentą priims objectą
 ir grąžins visus jo "key" masyve.
 -------------------------------------------------------------------------- */
 const audi = {
-  make: 'audi',
-  model: 'A6',
+  make: "audi",
+  model: "A6",
   year: 2005,
-  color: 'white',
+  color: "white",
 };
+
+function showObjectKeys(obj) {
+  const objKeys = Object.keys(obj);
+  return objKeys;
+}
+
+//f-jos testavimas
+// const audiKeys = showObjectKeys(audi);
+// console.log(audiKeys);
