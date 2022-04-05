@@ -17,5 +17,6 @@ function showObjectKeys(obj) {
 }
 
 //f-jos testavimas
+
 // const audiKeys = showObjectKeys(audi);
 // console.log(audiKeys);

@@ -25,15 +25,19 @@ function filterDogOwners(array) {
   return array.filter((obj) => obj.hasDog === true);
 }
 
-//"filterDogOwners" testavimas
-// const hasDog = filterDogOwners(users);
-// console.log("hasDog ===", hasDog);
-
 //2.Dalis "filterAdults"
 function filterAdults(array) {
   return array.filter((obj) => obj.age >= 18);
 }
 
-//"filterAdults" testavimas
+//testing============================
+
+//1."filterDogOwners" testing
+
+// const hasDog = filterDogOwners(users);
+// console.log("hasDog ===", hasDog);
+
+//2."filterAdults" testing
+
 // const isAdult = filterAdults(users);
 // console.log("isAdult ===", isAdult);

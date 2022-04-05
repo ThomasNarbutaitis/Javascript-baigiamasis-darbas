@@ -21,11 +21,12 @@ function Calculator() {
 }
 
 //f-jos testavimas
+
 // const anyTwoNumbers = new Calculator();
 
 // const checkSum = anyTwoNumbers.sum(9, 3);
 // const checkSubstraction = anyTwoNumbers.substraction(-4, 3);
-// const checkMultiplication = anyTwoNumbers.multiplication(0, 343);
+// const checkMultiplication = anyTwoNumbers.multiplication(5, 6);
 // const checkDivision = anyTwoNumbers.division(48, 3);
 
 // console.log("checkSum ===", checkSum);

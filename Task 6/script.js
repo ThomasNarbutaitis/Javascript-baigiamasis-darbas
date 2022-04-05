@@ -30,5 +30,6 @@ function getUserAverageAge(array) {
 
 //f-jos testavimas
 //users age vidurkis yra 30.77777777777778
+
 // const userArrayAvg = getUserAverageAge(users);
 // console.log(userArrayAvg);

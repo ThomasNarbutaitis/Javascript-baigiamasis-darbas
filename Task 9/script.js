@@ -19,12 +19,13 @@ class Movie {
     if (this.budget <= 100000000) {
       return false;
     } else {
-      alert("Check budget value. Must be number only");
+      alert(`Check budget value of "${this.title}". Must be a number only`);
     }
   }
 }
 
-//f-jos testavimas
+//f-jos testavimas============================
+
 // const movie1 = new Movie("Matrix", "The Wachowskis", 63000000);
 // const movie2 = new Movie("Avatar", "James Cameron", 237000000);
 // const movie3 = new Movie("Alien", "Ridley Scott", "11 million");
@@ -33,7 +34,8 @@ class Movie {
 // console.log("movie2 ===", movie2);
 // console.log("movie3 ===", movie3);
 
-//metodo "wasExpensive" testavimas
+//metodo "wasExpensive" testavimas============
+
 // console.log(movie1.wasExpensive());
 // console.log(movie2.wasExpensive());
 // console.log(movie3.wasExpensive());
