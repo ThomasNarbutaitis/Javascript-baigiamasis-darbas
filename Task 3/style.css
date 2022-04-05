@@ -3,8 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 /* Mobile first */
@@ -58,4 +58,38 @@
   padding: 30px;
   border-radius: 5px;
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* figure css =================== */
+
+.fig {
+  width: 300px;
+  box-shadow: 5px 10px 5px #aaa;
+  transition: transform 0.5s;
+  background: #222;
+}
+
+.fig:hover {
+  transform: scale(1.1);
+}
+
+.fig img {
+  width: 100%;
+  display: block;
+}
+
+figcaption {
+  padding: 24px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+}
+
+.hide {
+  display: none;
 }

@@ -8,3 +8,53 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+const kilosEl = document.getElementById("search");
+const divEl = document.getElementById("output");
+
+document.forms[0].addEventListener("submit", (event) => {
+  event.preventDefault();
+  const kilosValue = kilosEl.value;
+  //clear output
+  divEl.textContent = "";
+  //main function
+  validInput(kilosValue);
+});
+
+//functions for generating elements=======================================
+function outputIntro(kilos) {
+  const outputIntroEl = document.createElement("h4");
+  outputIntroEl.textContent = `You have entered ${kilos}kg, which will be equal to:`;
+  divEl.append(outputIntroEl);
+}
+
+function genConversions(kilos) {
+  const poundsVal = kilos * 2.2046;
+  const gramsVal = kilos / 0.001;
+  const ouncesVal = kilos * 35.274;
+  const ulEl = document.createElement("ul");
+  const liEl = `<li>Pounds(lb): ${poundsVal}</li>
+  <li>Grams(g): ${gramsVal}</li>
+  <li>Ounces(oz): ${ouncesVal}</li>`;
+  ulEl.innerHTML = liEl;
+  divEl.append(ulEl);
+}
+
+//main function for input validation and all outputs=======================
+function validInput(input) {
+  if (input.length < 1) {
+    divEl.className = "error";
+    divEl.textContent = "Please enter the value";
+    return divEl;
+  }
+  if (input != Number(input)) {
+    divEl.className = "error";
+    divEl.textContent = "Please enter numbers only";
+    return divEl;
+  } else {
+    if ((divEl.className = "error")) {
+      divEl.classList.toggle("error");
+    }
+    outputIntro(input);
+    genConversions(input);
+  }
+}
