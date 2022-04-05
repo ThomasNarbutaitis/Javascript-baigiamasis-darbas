@@ -20,35 +20,26 @@ document.forms[0].addEventListener("submit", (event) => {
   validInput(kilosValue);
 });
 
-//separate functions for generating outputs=======================================
+//functions for generating elements=======================================
 function outputIntro(kilos) {
   const outputIntroEl = document.createElement("h4");
   outputIntroEl.textContent = `You have entered ${kilos}kg, which will be equal to:`;
   divEl.append(outputIntroEl);
 }
 
-function kilosToPounds(kilos) {
+function genConversions(kilos) {
   const poundsVal = kilos * 2.2046;
-  const pKilosEl = document.createElement("p");
-  pKilosEl.textContent = `Pounds(lb): ${poundsVal};`;
-  divEl.append(pKilosEl);
-}
-
-function kilosToGrams(kilos) {
   const gramsVal = kilos / 0.001;
-  const pGramsEl = document.createElement("p");
-  pGramsEl.textContent = `Grams(g): ${gramsVal};`;
-  divEl.append(pGramsEl);
-}
-
-function kilosToOunces(kilos) {
   const ouncesVal = kilos * 35.274;
-  const pOuncesEl = document.createElement("p");
-  pOuncesEl.textContent = `Ounces(oz): ${ouncesVal};`;
-  divEl.append(pOuncesEl);
+  const ulEl = document.createElement("ul");
+  const liEl = `<li>Pounds(lb): ${poundsVal}</li>
+  <li>Grams(g): ${gramsVal}</li>
+  <li>Ounces(oz): ${ouncesVal}</li>`;
+  ulEl.innerHTML = liEl;
+  divEl.append(ulEl);
 }
 
-//main function for input validation and all outputs==============================
+//main function for input validation and all outputs=======================
 function validInput(input) {
   if (input.length < 1) {
     divEl.className = "error";
@@ -64,8 +55,6 @@ function validInput(input) {
       divEl.classList.toggle("error");
     }
     outputIntro(input);
-    kilosToPounds(input);
-    kilosToGrams(input);
-    kilosToOunces(input);
+    genConversions(input);
   }
 }
