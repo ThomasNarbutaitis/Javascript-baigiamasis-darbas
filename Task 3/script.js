@@ -10,7 +10,7 @@ Paspaudus mygtuką "Show users":
 Pastaba: Informacija apie user'į (jo kortelė) bei turi turėti bent minimalų stilių;
 -------------------------------------------------------------------------- */
 
-const endpoint = "https://api.github.com/users1";
+const endpoint = "https://api.github.com/users";
 const btnEl = document.getElementById("btn");
 const outputEl = document.getElementById("output");
 const messageEl = document.getElementById("message");
