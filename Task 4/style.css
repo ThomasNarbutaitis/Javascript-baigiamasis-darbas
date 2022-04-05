@@ -41,12 +41,13 @@
   padding: 20px;
   text-align: justify;
   box-shadow: 5px 10px 5px #aaa;
-  background: gold;
+  background: #ffdd00;
   border-radius: 8px;
 }
 
 .card h2 {
   margin-bottom: 16px;
+  color: #0057b7;
 }
 
 .card p {
